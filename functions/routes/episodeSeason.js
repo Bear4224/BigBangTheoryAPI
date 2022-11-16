@@ -18,7 +18,7 @@ const episodeSeason = (req, res) => {
       data: "Season number is out of range. There are only 12 seasons of this show."
     });
   }
-  else if (selection == []){
+  else if (selection.length == 0){
     res.status(200).json({
         success: false, 
         seasonNum: req.params.seasonNum,
